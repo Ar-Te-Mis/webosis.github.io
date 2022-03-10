@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00, minimum-scale-1.00, maximum-scale=2.00, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/shan.css" />
+    <!--Replace with your tailwind.css once created-->
+
+    <style>
+        .img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .sdh {
+            position: relative;
+            object-fit: cover;
+            width: auto;
+            min-height: 50px;
+            max-height: 50px;
+        }
+        
+        .borderColor {
+            border-color: #212a47;
+        }
+        
+        .body {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: auto;
+        }
+        
+        .text-sm1 {
+            font-size: 0.625rem;
+            line-height: 1.25rem;
+        }
+        
+        @media only screen and (min-width: 640px) {
+            #responsive {
+                width: 60%;
+            }
+        }
+        
+        @media only screen and (max-width:420px) {
+            #responsive {
+                width: 400px;
+                position: center;
+            }
+        }
+        
+        .hover\:bg-button:hover {
+            --tw-bg-opacity: 1;
+            background-color: #212a47;
+        }
+        
+        .bg-button {
+            --tw-bg-opacity: 1;
+            background-color: #374673;
+        }
+        
+        .text-blue {
+            --tw-text-opacity: 1;
+            color: #374673;
+        }
+    </style>
+</head>
+
+<body id="body" class="bg antialiased text-gray-900 leading-normal tracking-wider ">
+    <div class="max-w-2xl mx-auto h-screen grid place-items-center">
+        <div id="responsive" class="rounded-lg lg:rounded-l-lg lg:rounded-r-none lg:rounded-r-lg bg-whites">
+            <div id="profile " class="rounded-lg lg:rounded-l-lg lg:rounded-r-none lg:rounded-r-lg  hero-image bg-whites2 ">
+                <div style="padding:2rem">
+                    <img class=" img sdh " src="../src/logo/sdh.png " .>
+                    <div class="pt-4 pb-6 font-bold text-gray-500 text-2xl ">Sign In</div>
+                    <div class=" ">
+                        <form action=" ">
+
+                            <input id="username " class="focus:outline-none focus:border-b pb-1 border-solid border-b borderColor bg-transparent focus:border-b-4 text-gray-700 leading-tight " type="text " placeholder="Email, phone, or username
+                    " aria-label="Full name " style="width:100% ">
+                            <input id="password " class="pt-6 focus:outline-none focus:border-b pb-1 border-solid border-b borderColor bg-transparent focus:border-b-4 text-gray-700 leading-tight " type="password" placeholder="Password
+                    " aria-label="Full name " style="width:100% ">
+                            <div class="pt-2">
+                                <a class="text-sm1 text-blue-400">Forgot my password</a>
+                            </div>
+                            <div class="pt-3 flex justify-between">
+                                <button class=" hover:bg-button text-sm1 text-white  px-5 border  rounded" style="padding-top: 0.2rem;padding-bottom: 0.2rem;">
+                                    Create Account
+                                </button>
+
+                                <button class="bg-button hover:bg-button text-sm1 text-white  px-5 border  rounded" style="padding-top: 0.2rem;padding-bottom: 0.2rem;">
+                                        Sign in
+                                </button>
+
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js "></script>
+    <script src="https://unpkg.com/tippy.js@4 "></script>
+    <script>
+        tippy(' .link ', {
+            placement: 'bottom '
+        })
+    </script>
+    <script type="text/javascript ">
+        $(document).ready(function() {
+            var bgArray = ['loginback-1.jpg', 'loginback-2.jpg', 'loginback-3.jpg', 'loginback-4.jpg'];
+            var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+            var path = '../src/img/';
+            console.log(path + bg)
+            document.getElementById('body').style.background = "rgba(0, 0, 0, .5) url( " + path + bg + ") no-repeat center center fixed ";
+            document.getElementById('body').style.backgroundSize = "cover "
+        });
+    </script>
+</body>
+
+</html>
